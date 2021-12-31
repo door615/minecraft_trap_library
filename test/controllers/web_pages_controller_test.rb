@@ -4,6 +4,9 @@ class WebPagesControllerTest < ActionDispatch::IntegrationTest
   test "should get home" do
     get web_pages_home_url
     assert_response :success
+    assert_select 'path', text: 'inner_html' do
+      
+    end
   end
 
   test "should get about" do

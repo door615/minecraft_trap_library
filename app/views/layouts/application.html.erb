@@ -12,18 +12,15 @@
 
   <body class="is-preload">
     <%= render 'layouts/head' %>
-    
-    <div class="wrap">	
-	<!-- Content -->
-		
-		<div id="content">
-			<div class="inner">
-    <%= yield %>
-    <%= render 'layouts/pagination' %> 
 
-			</div>
-		</div>
-    <%= render 'layouts/sideber' %>
+    <div class="wrap">	
+      <div id="content">
+        <div class="inner">
+          <%= yield %>
+          <%= render 'layouts/pagination' %> 
+        </div>
+      </div>
+      <%= render 'layouts/sideber' %>
     </div>
   </body>
 </html>

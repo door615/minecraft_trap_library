@@ -1,4 +1,10 @@
 class PostsController < ApplicationController
+    
+  private def post_params
+    params.require(:post).permit(:title, :feature_text, :link,
+                                  :text)
+  end
+
   # 記事の一覧表示
   def index
     @posts = Post.all
@@ -16,6 +22,7 @@ class PostsController < ApplicationController
 
   # 記事の登録
   def create
+      
     @post = Post.new(post_params)
     if @post.save
       redirect_to @post
@@ -23,12 +30,7 @@ class PostsController < ApplicationController
       render 'new'
     end
 
-    private
-
-    def post_params
-      params.require(:post).permit(:title, :link, :feature_text,
-                                   :text)
-    end
+      
   end
 
   # 記事の編集

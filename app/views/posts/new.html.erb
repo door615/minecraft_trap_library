@@ -1,5 +1,5 @@
-<h1>Posts#new</h1>
-<%= form_with model: @post local: true do |form| %>
+<h1>新規投稿ページ</h1>
+<%= form_with(model: @user, local: true) do |form| %>
     <p>
       <%= form.label :title %><br>
       <%= form.text_field :title %>
@@ -21,6 +21,6 @@
     </p>
    
     <p>
-      <%= f.submit "Create a Page", class: "button" %>
+      <%= form.submit "Create a Page", class: "button" %>
     </p>
 <% end %>

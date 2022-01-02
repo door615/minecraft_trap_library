@@ -7,9 +7,23 @@
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= render 'layouts/shim' %>
   </head>
 
-  <body>
+  <body class="is-preload">
+    <%= render 'layouts/head' %>
+    
+    <div class="wrap">	
+	<!-- Content -->
+		
+		<div id="content">
+			<div class="inner">
     <%= yield %>
+    <%= render 'layouts/pagination' %> 
+
+			</div>
+		</div>
+    <%= render 'layouts/sideber' %>
+    </div>
   </body>
 </html>

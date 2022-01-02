@@ -1,5 +1,7 @@
 <h1>新規投稿ページ</h1>
 <%= form_with(model: @user, local: true) do |form| %>
+
+    <%= render 'shared/error_messages' %>
     <p>
       <%= form.label :title %><br>
       <%= form.text_field :title %>

@@ -3,22 +3,32 @@
 
     <%= render 'shared/error_messages' %>
     <p>
-      <%= form.label :title %><br>
+      <%= form.label :トラップのタイトルを入力してください（必須） %><br>
       <%= form.text_field :title %>
+    </p>
+
+    <p>
+      <%= form.label :サムネイル画像を入れてください %><br>
+      <%= form.file_field :image %>
     </p>
    
     <p>
-      <%= form.label :feature_text %><br>
+      <%= form.label :トラップの説明を書いてください（必須） %><br>
       <%= form.text_area :feature_text %>
     </p>
 
     <p>
-      <%= form.label :link %><br>
+      <%= form.label :youtubeのリンクを貼る場合はこちら（必須） %><br>
+      <%= form.text_field :youtube_link %>
+    </p>
+
+    <p>
+      <%= form.label :webサイトのリンクを貼る場合はこちら（必須） %><br>
       <%= form.text_field :link %>
     </p>
 
     <p>
-      <%= form.label :text %><br>
+      <%= form.label :何か注釈があれば入力してください %><br>
       <%= form.text_area :text %>
     </p>
    

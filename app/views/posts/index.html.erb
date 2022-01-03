@@ -1,0 +1,25 @@
+<ul class="cards7">
+
+<% @posts.each do |post| %>
+
+<%= link_to post_path(post) do %>
+
+    <!-- card -->
+    <li class="card7">
+        <div class="card__image-holder"> <img class="card__image" src="https://dubdesign.net/wp-content/uploads/2021/03/jquerymatome_eyecatch-1024x587.jpg" alt="アイキャッチ画像"> </div>
+        <div class="card-title"> 
+            <span class="left"></span>
+            <span class="right"></span>
+        </a>
+        <p class="card_timecategory"><time class="pubdate entry-time dfont" itemprop="datePublished" datetime="2021-10-16"><%= post.created_at %></time></p>
+        <p class="card_htitle"><%= post.title %></p>
+        </div>
+        <div class="card-flap flap1">
+        <div class="card-description"><%= post.feature_text %></div>
+        <div class="card-flap flap2">
+            <div class="card-actions"> <a href="#" class="btn7">記事を見る</a> </div>
+        </div>
+        </div>
+    </li>
+<% end %>
+<% end %>

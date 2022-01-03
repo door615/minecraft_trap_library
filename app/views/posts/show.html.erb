@@ -1,2 +1,34 @@
-<h1>Posts#show</h1>
-<p>Find me in app/views/posts/show.html.erb</p>
+<article class="box post post-excerpt">
+    <header>
+        <h2><%= @post.title %></h2>
+    </header>
+    
+    <br>
+    <br>
+
+    
+    <p><%= safe_join(@post.feature_text.split("\n"),tag(:br)) %></p>
+    
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <h3>トラップはこちらからどうぞ</h3>
+
+    <br>
+
+    <div class="movie-wrap">
+        <iframe width="100%" height="300px" src="<%= @post.link%>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <p>
+        <%= safe_join(@post.text.split("\n"),tag(:br)) %>
+    </p>
+</article>

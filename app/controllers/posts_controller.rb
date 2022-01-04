@@ -7,7 +7,7 @@ class PostsController < ApplicationController
 
   # 記事の一覧表示
   def index
-    @posts = Post.page(params[:page]).per(2)
+    @posts = Post.page(params[:page]).per(10)
   end
 
   # 記事の表示

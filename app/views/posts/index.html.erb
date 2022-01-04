@@ -6,7 +6,13 @@
 
     <!-- card -->
     <li class="card7">
-        <div class="card__image-holder"> <img class="card__image" src="https://dubdesign.net/wp-content/uploads/2021/03/jquerymatome_eyecatch-1024x587.jpg" alt="アイキャッチ画像"> </div>
+
+    <% if post.avatar? %>
+        <div class="card__image-holder"> <img class="card__image" src="<%= post.avatar.url %>" alt="アイキャッチ画像"> </div>
+    <% else %>
+        <div class="card__image-holder"> <img class="card__image" src="/assets/default.png" alt="アイキャッチ画像"> </div>
+    <% end %>
+    
         <div class="card-title"> 
             <span class="left"></span>
             <span class="right"></span>

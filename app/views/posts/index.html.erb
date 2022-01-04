@@ -8,9 +8,9 @@
     <li class="card7">
 
     <% if post.avatar? %>
-        <div class="card__image-holder"> <img class="card__image" src="<%= post.avatar.url %>" alt="アイキャッチ画像"> </div>
+        <div class="card__image-holder"> <img class="card__image" src="<%= post.avatar.url %>" alt="サムネイル画像"> </div>
     <% else %>
-        <div class="card__image-holder"> <img class="card__image" src="/assets/default.png" alt="アイキャッチ画像"> </div>
+        <div class="card__image-holder"> <img class="card__image" src="/assets/default.png" alt="サムネイル画像"> </div>
     <% end %>
     
         <div class="card-title"> 
@@ -29,3 +29,5 @@
     </li>
 <% end %>
 <% end %>
+
+<%= paginate(@posts) %>

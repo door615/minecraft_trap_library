@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
     
   private def post_params
-    params.require(:post).permit(:title, :feature_text, :image, :youtube_link, :blog_link,
+    params.require(:post).permit(:title, :feature_text, :avatar, :youtube_link, :blog_link,
                                   :text)
   end
 

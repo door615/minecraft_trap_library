@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
     
   private def post_params
-    params.require(:post).permit(:title, :feature_text, :link,
+    params.require(:post).permit(:title, :feature_text, :image, :youtube_link, :blog_link,
                                   :text)
   end
 
@@ -24,7 +24,6 @@ class PostsController < ApplicationController
   def create
       
     @post = Post.new(post_params)
-    @post.image = params[:post][:image].read
     if @post.save
       redirect_to @post
     else

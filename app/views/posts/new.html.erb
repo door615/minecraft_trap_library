@@ -31,6 +31,15 @@
       <%= form.label :何か注釈があれば入力してください %><br>
       <%= form.text_area :text %>
     </p>
+
+    
+       <%= form.collection_select(:tag_ids, Tag.all, :id, :name) %>
+       
+       
+         
+    
+   
+
    
     <p>
       <%= form.submit "Create a Page", class: "button" %>

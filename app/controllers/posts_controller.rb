@@ -2,7 +2,7 @@ class PostsController < ApplicationController
     
   private def post_params
     params.require(:post).permit(:title, :feature_text, :avatar, :youtube_link, :blog_link,
-                                  :text)
+                                  :text, tag_ids: [])
   end
 
   # 記事の一覧表示
@@ -24,7 +24,7 @@ class PostsController < ApplicationController
   def create
       
     @post = Post.new(post_params)
-    if @post.save
+    if @post.save && @tag.save
       redirect_to @post
     else
       render 'new'

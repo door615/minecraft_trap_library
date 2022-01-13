@@ -35,9 +35,10 @@
       <%= form.text_area :text %>
     </p>
 
-    
-       <%= form.collection_select(:tag_ids, Tag.all, :id, :name) %>
-       
+    <p>
+      <%= form.label :必須タグを入力 %><br>
+      <%= form.collection_select(:tag_ids, Tag.all, :id, :name) %>
+    </p>
        
          
     

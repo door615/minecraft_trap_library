@@ -48,8 +48,26 @@ class PostsController < ApplicationController
   end
 
   def search
-    @posts = Post.search(params[:keyword]).page(params[:page]).per(10)
+    
     @keyword = params[:keyword]
-    render "index"
-  end
+    @tag_ids = params[:tag_ids]
+    
+    if @keyword && @tag_ids 
+      array1 = Post.search(@keyword)
+      array2 = Tag.search(@tag_ids)
+      posts = array1.concat(array2)
+      posts.uniq!
+      @posts = posts.page(params[:page]).per(10)
+
+    elsif @keyword 
+      @posts = Post.search(params[:keyword]).page(params[:page]).per(10)
+
+    elsif @tag_ids 
+      @posts = Tag.search(params[:keyword]).page(params[:page]).per(10)
+
+    else 
+      @posts = Post.page(params[:page]).per(10)
+      
+    end
+    
 end

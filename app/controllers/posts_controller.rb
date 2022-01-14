@@ -7,7 +7,9 @@ class PostsController < ApplicationController
 
   # 記事の一覧表示
   def index
+    if @post == nil then
     @posts = Post.page(params[:page]).per(10)
+    end
   end
 
   # 記事の表示
@@ -43,5 +45,11 @@ class PostsController < ApplicationController
 
   # 記事の削除
   def destroy
+  end
+
+  def search
+    @posts = Post.search(params[:keyword]).page(params[:page]).per(10)
+    @keyword = params[:keyword]
+    render "index"
   end
 end

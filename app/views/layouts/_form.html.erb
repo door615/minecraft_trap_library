@@ -32,15 +32,15 @@
     </p>
 
     <p>
-      <%= form.label :必須タグを入力 %><br>
-      <%= form.collection_select(:tag_ids, Tag.all, :id, :name) %>
+      <%= form.label :タグを追加 %><br>
+      <%= form.collection_check_boxes(:tag_ids, Tag.all, :id, :name) do |tag| %>
+       <%= tag.label do %>
+         <%= tag.check_box %>
+         <%= tag.text %>
+       <% end %>
+      <% end %>
     </p>
        
-         
-    
-   
-
-   
     <p>
       <%= form.submit "Create a Page", class: "button" %>
     </p>

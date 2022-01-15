@@ -47,6 +47,9 @@ class PostsController < ApplicationController
   def destroy
   end
 
+  def search_page
+  end
+
   def search
     
     keyword = params[:keyword]

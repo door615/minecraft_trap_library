@@ -4,7 +4,4 @@ class WebPagesController < ApplicationController
 
   def about
   end
-
-  def search_page
-  end
 end

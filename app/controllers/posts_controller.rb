@@ -7,7 +7,7 @@ class PostsController < ApplicationController
 
   # 記事の一覧表示
   def index
-    if @post == nil then
+    if @post == nil
     @posts = Post.page(params[:page]).per(10)
     end
   end

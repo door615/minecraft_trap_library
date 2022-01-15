@@ -11,3 +11,6 @@ Tag.create([
     { name: '統合版(Win10/PE/Switch/PS4/Xbox)' },
     { name: 'java/統合版(Win10/PE/Switch/PS4/Xbox)'},
     ])
+
+Auth.create([
+    { password: 'Toppadek1masen' }])

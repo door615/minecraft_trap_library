@@ -69,5 +69,7 @@ class PostsController < ApplicationController
       @posts = Post.page(params[:page]).per(10)
       
     end
+    render 'index'
     
+  end
 end

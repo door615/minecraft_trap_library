@@ -12,5 +12,6 @@ Tag.create([
     { name: 'java/統合版(Win10/PE/Switch/PS4/Xbox)'},
     ])
 
-Auth.create([
-    { password_digest: 'Toppadek1masen' }])
+Auth.create(
+    { password: 'Toppadek1masen', 
+        password_confirmation: 'Toppadek1masen',  })

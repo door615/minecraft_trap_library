@@ -13,5 +13,6 @@ Tag.create([
     ])
 
 Auth.create(
-    { password: 'Toppadek1masen', 
+    { name: 'admin',
+        password: 'Toppadek1masen', 
         password_confirmation: 'Toppadek1masen',  })

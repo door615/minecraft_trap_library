@@ -3,14 +3,15 @@ class Tag < ApplicationRecord
     has_many :posts, through: :post_tags
 
     def self.search(tag_ids)
-        if tag_ids != nil 
-            tag_ids.shift()
-            if tag_ids.instance_of?(Integer)
-                tag_ids = [].push(tag_ids)
+        
+            tag_ids.delete_at(0)
+            array2 = []
+            tag_ids.each do |tag_id|
+                array2.concat(Tag.find(tag_id).posts)
             end
-            posts = Post.find(tag_ids)
-            posts.uniq!
-        end
+            array2.uniq!
+            return(array2)
+        
     end
 
 end

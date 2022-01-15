@@ -6,6 +6,7 @@ class Post < ApplicationRecord
     mount_uploader :avatar, AvatarUploader
 
     def self.search(keyword)
-        where(["title like? OR feature_text like?", "%#{keyword}%", "%#{keyword}%"])
+        array1 = Post.where(["title like? OR feature_text like?", "%#{keyword}%", "%#{keyword}%"])
+        array1.to_a
     end
 end

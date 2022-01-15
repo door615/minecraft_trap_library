@@ -4,13 +4,11 @@ class Tag < ApplicationRecord
 
     def self.search(tag_ids)
         if tag_ids != nil 
-            if tag_ids.instance.of?(Integer)
+            tag_ids.shift()
+            if tag_ids.instance_of?(Integer)
                 tag_ids = [].push(tag_ids)
             end
-            posts = []
-            tag_ids.each do |tag_id|
-                posts.concat(Tag.find(tag_id).posts)
-            end
+            posts = Post.find(tag_ids)
             posts.uniq!
         end
     end

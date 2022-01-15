@@ -63,7 +63,7 @@ class PostsController < ApplicationController
       @posts = Post.search(params[:keyword]).page(params[:page]).per(10)
 
     elsif @tag_ids 
-      @posts = Tag.search(params[:keyword]).page(params[:page]).per(10)
+      @posts = Tag.search(params[:tag_ids]).page(params[:page]).per(10)
 
     else 
       @posts = Post.page(params[:page]).per(10)

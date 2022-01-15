@@ -5,4 +5,5 @@ Rails.application.routes.draw do
   get '/search_page', to: "posts#search_page"
   get 'search', to: 'posts#search'
   get "auth", to: "auths#auth"
+  get 'login', to: 'auths#login'
 end

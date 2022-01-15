@@ -1,4 +1,4 @@
-<% if @post.errors.any? %>
+<% if @psot.present? && @post.errors.any? %>
   <div id="error_explanation">
     <div class="alert alert-danger">
       フォームにはエラーが <%= @post.errors.count %>つあります。

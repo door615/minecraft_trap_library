@@ -13,4 +13,4 @@ Tag.create([
     ])
 
 Auth.create([
-    { password: 'Toppadek1masen' }])
+    { password_digest: 'Toppadek1masen' }])

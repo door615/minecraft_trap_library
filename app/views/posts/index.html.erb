@@ -7,11 +7,15 @@
     <!-- card -->
     <li class="card7">
 
+    <!-- carrierwaveでサムネイル画像を作りはしましたが、まだ外部のデータベースに画像を保存
+    するようにはしていなく、herokuでは画像が消えてしまうので、とりあえずコメントアウトしてい
+    ます
     <% if post.avatar? %>
         <div class="card__image-holder"> <img class="card__image" src="<%= post.avatar.url %>" alt="サムネイル画像"> </div>
     <% else %>
+    -->
         <div class="card__image-holder"> <img class="card__image" src="/assets/default.png" alt="サムネイル画像"> </div>
-    <% end %>
+    <!-- <% end %> -->
     
         <div class="card-title"> 
             <span class="left"></span>
@@ -19,6 +23,7 @@
         </a>
         <p class="card_timecategory"><time class="pubdate entry-time dfont" itemprop="datePublished" datetime="2021-10-16"><%= post.created_at %></time></p>
         
+        <p class="card_htitle"><%= post.title %></p>
         <% post.tags.each do |tag| %>
         <p class="card_htitle"><%= tag.name %></p>
         <% end %>

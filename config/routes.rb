@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   resources :posts
-  root 'web_pages#home'
+  root 'posts#index'
   get '/about', to: 'web_pages#about' 
   get '/search_page', to: "posts#search_page"
   get 'search', to: 'posts#search'

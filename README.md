@@ -1,24 +1,15 @@
-# README
+# Minecraft Trap Library
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+これはMinecraftのトラップをまとめたサイトです。
 
-Things you may want to cover:
+Minecraftのトラップはややこしく、種類も多いので、それらをまとめて、トラップごとにタグをつけるなどして探しやすくするためのサイトです。
 
-* Ruby version
+このサイトの主な機能として、記事の投稿機能(しばらくは管理人のみが投稿できるようにしています)、キーワード検索、タグ検索機能があります。
 
-* System dependencies
+このサイトの投稿機能は管理人限定にしているので、サイト上にurlなどは載せていません。確認したい場合は、https://calm-inlet-60018.herokuapp.com/posts/newにアクセスして、パスワードToppadek1masen(これが認証画面のパスワードです)を入力してください。
 
-* Configuration
+まだ未完成ですので、かなりお見苦しいプロダクトですが、見ていただいたら幸いです。
 
-* Database creation
 
-* Database initialization
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...

@@ -5,8 +5,11 @@ class AuthsController < ApplicationController
 
     def login
         admin = Auth.find_by(name: "admin")
-        if admin.authenticate(params[:password])
-            render 'posts/new'
+        if admin.authenticate(params[:session][:password])
+            log_in admin
+            redirect_back_or "/"
+        else
+            redirect_to auth_path
         end
     end
 

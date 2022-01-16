@@ -1,4 +1,5 @@
 class PostsController < ApplicationController
+  before_action :logged_in_admin, only: [:new, :create, :edit, :update]
     
   private def post_params
     params.require(:post).permit(:title, :feature_text, :avatar, :youtube_link, :blog_link,
@@ -74,5 +75,12 @@ class PostsController < ApplicationController
     end
     render 'index'
     
+  end
+
+  def logged_in_admin
+    unless logged_in?
+      store_location
+      redirect_to auth_url
+    end
   end
 end

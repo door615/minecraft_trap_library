@@ -3,7 +3,7 @@ class Tag < ApplicationRecord
     has_many :posts, through: :post_tags
 
     def self.search(tag_ids)
-        
+
             tag_ids.delete_at(0)
             array2 = []
             tag_ids.each do |tag_id|

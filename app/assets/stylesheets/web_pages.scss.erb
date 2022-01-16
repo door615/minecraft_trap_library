@@ -10,9 +10,7 @@ border: 0;
 
 }
 /*
-Striped by HTML5 UP
-html5up.net | @ajlkn
-Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+ここから下のcssはwebのテンプレートをコピペした部分です(多少改造していますが)
 */
 
 html, body, div, span, applet, object,
@@ -93,7 +91,7 @@ html {
 
 body {
 	background-color: #fff;
-	background-image: url("/app/assets/images/bg02.png");
+	background-image: url("<%= asset_path('bg02.png') %>");
 	
 	
 }
@@ -321,7 +319,7 @@ button,
 .button {
 	cursor: pointer;
 	background-color: #c94663;
-	background-image: url("/app/assets/images/bg01.png");
+	background-image: url("<%= asset_path('bg01.png') %>");
 	border-radius: 0.4em;
 	text-align: center;
 	box-shadow: inset 0px 0px 0px 1px rgba(255, 255, 255, 0.15);
@@ -431,7 +429,7 @@ ol {
 		text-decoration: none;
 		color: inherit;
 		background-color: #e8e8e8;
-		background-image: url("/app/assets/images/bg02.png");
+		background-image: url("<%= asset_path('bg02.png') %>");
 		color: #565656;
 		margin: 0 0.4em 0 0;
 		border-radius: 0.4em;
@@ -522,7 +520,7 @@ ol {
 
 .box.calendar td.today a {
 	background-color: #c94663;
-	background-image: url("/app/assets/images/bg01.png");
+	background-image: url("<%= asset_path('bg01.png') %>");
 	box-shadow: inset 0px 0px 0px 1px rgba(255, 255, 255, 0.15), 0 0.025em 0.15em 0em rgba(0, 0, 0, 0.25);
 	color: #fff !important;
 }
@@ -745,7 +743,7 @@ ol {
 	top: 0;
 	width: 100%;
 	z-index: 10001;
-	background: #5d695f url("/app/assets/images/bg01.png");
+	background: #5d695f url("<%= asset_path('bg02.png') %>");
 }
 
 	#titleBar .title {
@@ -798,7 +796,7 @@ ol {
 			width: 50px;
 			height: 30px;
 			line-height: 30px;
-			background: #c94663 url("/app/assets/images/bg01.png");
+			background: #c94663 url("<%= asset_path('bg02.png') %>");
 			border-radius: 5px;
 			color: #fff;
 			text-align: center;
@@ -878,7 +876,7 @@ ol {
 #content {
 	position: relative;
 	background-color: #fff;
-	background-image: url("/app/assets/images/bg02.png");
+	background-image: url("<%= asset_path('bg02.png') %>");
 	width: 100%;
 	-moz-flex-grow: 1;
 	-webkit-flex-grow: 1;
@@ -1050,7 +1048,7 @@ ol {
 			#logo a {
 				display: block;
 				background-color: #c94663;
-				background-image: url("/app/assets/images/bg01.png");
+				background-image: url("<%= asset_path('bg02.png') %>");
 				padding: 0.875em 0.25em;
 				border-radius: 0.2em;
 				text-align: center;
@@ -1069,7 +1067,7 @@ ol {
 			.logo2 a {
 				display: block;
 				background-color: #c94663;
-				background-image: url("/app/assets/images/bg01.png");
+				background-image: url("<%= asset_path('bg02.png') %>");
 				padding: 0.875em 0.25em;
 				border-radius: 0.2em;
 				text-align: center;
@@ -1152,7 +1150,7 @@ ol {
 			width: 5.5em;
 			overflow: hidden;
 			background-color: #fff;
-			background-image: url("/app/assets/images/bg02.png");
+			background-image: url("<%= asset_path('bg02.png') %>");
 			left: -10.5em;
 			top: 0;
 			padding: 1.5em 1em 1.5em 1em;

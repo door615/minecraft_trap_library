@@ -38,10 +38,17 @@ class PostsController < ApplicationController
 
   # 記事の編集
   def edit
+    @post = Post.find(params[:id])
   end
 
   # 記事の更新
   def update
+    @post = Post.find(params[:id])
+    if @post.update(post_params)
+      redirect_to @post
+    else
+      render 'edit'
+    end
   end
 
   # 記事の削除

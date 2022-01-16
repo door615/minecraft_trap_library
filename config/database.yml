@@ -80,7 +80,12 @@ test:
 # for a full overview on how database connection configuration can be specified.
 #
 production:
-  <<: *default
+  production:
+  adapter: postgresql
+  encoding: unicode
+  # For details on connection pooling, see Rails configuration guide
+  # https://railsguides.jp/configuring.html#データベース接続をプールする
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   database: minecraft_trap_library_production
   username: minecraft_trap_library
   password: <%= ENV['MINECRAFT_TRAP_LIBRARY_DATABASE_PASSWORD'] %>

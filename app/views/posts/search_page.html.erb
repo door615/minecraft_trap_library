@@ -1,0 +1,11 @@
+<%= form_with url: search_path, method: :get, local: true do |form| %>
+    <%= form.text_field :keyword, value: @keyword %>
+
+    <%= form.collection_check_boxes(:tag_ids, Tag.all, :id, :name) do |tag| %>
+       <%= tag.label do %>
+         <%= tag.check_box %>
+         <%= tag.text %>
+       <% end %>
+    <% end %>
+    <%= form.submit "検索" %>
+  <% end %>

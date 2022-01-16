@@ -5,3 +5,14 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+Tag.create([
+    { name: 'java版' },
+    { name: '統合版(Win10/PE/Switch/PS4/Xbox)' },
+    { name: 'java/統合版(Win10/PE/Switch/PS4/Xbox)'},
+    ])
+
+Auth.create(
+    { name: 'admin',
+        password: 'Toppadek1masen', 
+        password_confirmation: 'Toppadek1masen',  })

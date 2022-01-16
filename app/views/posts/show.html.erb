@@ -1,0 +1,27 @@
+<article class="box post post-excerpt">
+    <header>
+        <h2><%= @post.title %></h2>
+    </header>
+
+    <p><%= safe_join(@post.feature_text.split("\n"),tag(:br)) %></p>
+
+    <% if !@post.youtube_link.blank? || !@post.blog_link.blank? %>
+        <h3>トラップはこちらからどうぞ</h3>
+    <% end %>
+    
+    <% if !@post.youtube_link.blank? %>
+        <div class="movie-wrap">
+            <iframe width="100%" height="300px" src="<%= @post.youtube_link%>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    <% end %>
+
+    <% if !@post.blog_link.blank? %>
+        <div class="movie-wrap">
+            <%= link_to "#{@post.blog_link}", "#{@post.blog_link}" %>
+        </div>
+    <% end %>
+
+    <p>
+        <%= safe_join(@post.text.split("\n"),tag(:br)) %>
+    </p>
+</article>

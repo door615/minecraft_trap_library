@@ -1,0 +1,47 @@
+<%= form_with(model: @post, local: true) do |form| %>
+
+    <%= render 'shared/error_messages' %>
+    <p>
+      <%= form.label :トラップのタイトルを入力してください（必須） %><br>
+      <%= form.text_field :title %>
+    </p>
+
+    <p>
+      <%= form.label :トラップのサムネイルを入れてください %><br>
+      <%= form.file_field :avatar %>
+    </p>
+   
+    <p>
+      <%= form.label :トラップの説明を書いてください（必須） %><br>
+      <%= form.text_area :feature_text %>
+    </p>
+
+    <p>
+      <%= form.label :youtubeのリンクを貼る場合はこちら %><br>
+      <%= form.text_field :youtube_link %>
+    </p>
+
+    <p>
+      <%= form.label :webサイトのリンクを貼る場合はこちら %><br>
+      <%= form.text_field :blog_link %>
+    </p>
+
+    <p>
+      <%= form.label :何か注釈があれば入力してください %><br>
+      <%= form.text_area :text %>
+    </p>
+
+    <p>
+      <%= form.label :タグを追加 %><br>
+      <%= form.collection_check_boxes(:tag_ids, Tag.all, :id, :name) do |tag| %>
+       <%= tag.label do %>
+         <%= tag.check_box %>
+         <%= tag.text %>
+       <% end %>
+      <% end %>
+    </p>
+       
+    <p>
+      <%= form.submit "Create a Page", class: "button" %>
+    </p>
+<% end %>

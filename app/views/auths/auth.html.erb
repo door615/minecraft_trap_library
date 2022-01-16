@@ -1,0 +1,6 @@
+<h2>このページは管理者のみが利用できます</h2>
+<p>利用する場合はパスワードを入力してください</p>
+ <%= form_with(url: login_path, scope: :session, local: true) do |form| %>
+ <%= form.password_field :password %>
+ <%= form.submit "Log in" %>
+ <% end %>

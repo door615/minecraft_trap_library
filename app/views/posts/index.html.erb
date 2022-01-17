@@ -24,7 +24,7 @@
                 
                 <p class="card_htitle"><%= post.title %></p>
                 <% post.tags.each do |tag| %>
-                <p class="card_htitle"><%= tag.name %></p>
+                <span class="card_htitle font_size"><%= "#{tag.name}" + "　" %></span>
                 <% end %>
 
             </div>

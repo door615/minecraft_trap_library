@@ -1,7 +1,3 @@
-.font_size{
-    font-size: 0.1em;
-}
-
 /*
 このcssはwebのテンプレートをコピペして作りました。(多少改造していますが)
 */
@@ -235,6 +231,11 @@ ul.cards7 {
 li.card7 {
     width: 100%;
 }
+}
+
+.font_size{
+    font-size: 0.1em;
+    font-weight: bold;
 }
 
 

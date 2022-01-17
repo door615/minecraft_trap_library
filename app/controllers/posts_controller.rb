@@ -71,7 +71,7 @@ class PostsController < ApplicationController
     keyword = params[:keyword]
     tag_ids = params[:tag_ids]
     
-    #フォームに何も入力しなかったとき、keyword = "", tag_ids = [""]となっていたので
+    #ifの条件式の部分はフォームに何も入力しなかったとき、keyword = "", tag_ids = [""]となっていたので
     #このような書き方になってしまいました...
     #もっとましな書き方にできるようにしたいです
 

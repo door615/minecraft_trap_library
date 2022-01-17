@@ -3,6 +3,9 @@ class PostsController < ApplicationController
   before_action :logged_in_admin, only: [:new, :create, :edit, :update]
     
   #記事を作成するときのストロングパラメーター
+  #title:記事のタイトル　feature_text:記事の本文　avatar:画像　youtube_link:埋め込みリンク
+  #blog_url:webサイトのurl　text:分かりずらいですが、注釈などのためのカラムです。
+  #tag_ids:タグのidの配列
   private def post_params
     params.require(:post).permit(:title, :feature_text, :avatar, :youtube_link, :blog_link,
                                   :text, tag_ids: [])

@@ -3,7 +3,7 @@ class Tag < ApplicationRecord
     has_many :posts, through: :post_tags
 
 
-    #検索フォームでタグが入力されたとき、タグをOR検索します
+    #検索フォームでタグが入力されたとき、タグをOR検索します←ORではなくANDにするべきでした...
     #このメソッドは同じデータを複数回データベースから取り出しているので
     #改善が必要です
     def self.search(tag_ids)

@@ -9,6 +9,25 @@ margin: 0;
 border: 0;
 
 }
+
+.logo2 {
+			font-family: 'NotoSans', sans-serif;
+			font-weight: 700;
+			font-size: 2em;
+			letter-spacing: 0.1em;
+		}
+
+			.logo2 a {
+				display: block;
+				background-color: #c94663;
+				background-image: url("<%= asset_path('bg02.png') %>");
+				padding: 0.875em 0.25em;
+				border-radius: 0.2em;
+				text-align: center;
+				box-shadow: inset 0px 0px 0px 1px rgba(255, 255, 255, 0.15), 0 0.025em 0.15em 0em rgba(0, 0, 0, 0.25);
+				text-decoration: none;
+				color: #fff;
+			}
 /*
 ここから下のcssはwebのテンプレートをコピペした部分です(多少改造していますが)
 */
@@ -1503,6 +1522,9 @@ ol {
 	.head{
 		display: none;
 	}
+
+	.space {
+	margin: 0.8em;}
 
 }
 

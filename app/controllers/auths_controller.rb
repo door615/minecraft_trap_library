@@ -1,8 +1,11 @@
 class AuthsController < ApplicationController
+
+    #管理人の認証ページです。
     def auth
         render :layout => nil
     end
 
+    #ログインをするメソッドです
     def login
         admin = Auth.find_by(name: "admin")
         if admin.authenticate(params[:session][:password])

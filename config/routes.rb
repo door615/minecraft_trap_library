@@ -12,4 +12,6 @@ Rails.application.routes.draw do
   get '/java', to: 'web_pages#java'
   get '/bedrock', to: 'web_pages#bedrock'
   get '/java_BE', to: 'web_pages#java_BE'
+  get '/new_pages', to: 'web_pages#new_posts'
+  get '/contact', to: 'web_pages#contact'
 end

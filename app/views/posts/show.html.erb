@@ -1,6 +1,6 @@
 <article class="box post post-excerpt">
     <header>
-        <h2><%= @post.title %></h2>
+        <h1><%= @post.title %></h1>
     </header>
 
     <p><%= safe_join(@post.feature_text.split("\n"),tag(:br)) %></p>
@@ -11,7 +11,7 @@
     
     <% if !@post.youtube_link.blank? %>
         <div class="movie-wrap">
-            <iframe width="100%" height="300px" src="<%= @post.youtube_link%>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="100%" height="300px" src="<%= @post.youtube_link%>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br>
         </div>
     <% end %>
 

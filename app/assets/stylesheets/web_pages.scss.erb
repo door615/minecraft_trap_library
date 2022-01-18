@@ -9,12 +9,31 @@ margin: 0;
 border: 0;
 
 }
+
+.logo2 {
+			font-family: 'NotoSans', sans-serif;
+			font-weight: 700;
+			font-size: 2em;
+			letter-spacing: 0.1em;
+		}
+
+			.logo2 a {
+				display: block;
+				background-color: #c94663;
+				background-image: url("<%= asset_path('bg02.png') %>");
+				padding: 0.875em 0.25em;
+				border-radius: 0.2em;
+				text-align: center;
+				box-shadow: inset 0px 0px 0px 1px rgba(255, 255, 255, 0.15), 0 0.025em 0.15em 0em rgba(0, 0, 0, 0.25);
+				text-decoration: none;
+				color: #fff;
+			}
 /*
 ここから下のcssはwebのテンプレートをコピペした部分です(多少改造していますが)
 */
 
 html, body, div, span, applet, object,
-iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
+iframe, h1, h1, h3, h4, h5, h6, p, blockquote,
 pre, a, abbr, acronym, address, big, cite,
 code, del, dfn, em, img, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var, b,
@@ -108,7 +127,7 @@ body {
 	}
 
 body, input, textarea, select {
-	font-family: 'Source Sans Pro', sans-serif;
+	font-family: 'NotoSans', sans-serif;
 	font-weight: 400;
 	color: #565656;
 }
@@ -122,13 +141,13 @@ strong, b {
 	color: #232323;
 }
 
-h2, h3, h4, h5, h6 {
-	font-family: 'Open Sans Condensed', sans-serif;
+h1, h3, h4, h5, h6 {
+	font-family: 'NotoSans', sans-serif;
 	font-weight: 700;
 	color: #232323;
 }
 
-h2 a, h4 a, h5 a, h6 a {
+h1 a, h4 a, h5 a, h6 a {
 	text-decoration: none;
 	color: inherit;
 }
@@ -205,7 +224,7 @@ table {
 /* Form */
 
 form label {
-	font-family: 'Open Sans Condensed', sans-serif;
+	font-family: 'NotoSans', sans-serif;
 	font-weight: 700;
 	color: #232323;
 	margin: 0 0 0.75em 0;
@@ -256,7 +275,7 @@ header {
 }
 
 	header > p {
-		font-family: 'Open Sans Condensed', sans-serif;
+		font-family: 'NotoSans', sans-serif;
 		font-weight: 300;
 		display: block;
 		margin-top: 1em;
@@ -324,7 +343,7 @@ button,
 	text-align: center;
 	box-shadow: inset 0px 0px 0px 1px rgba(255, 255, 255, 0.15);
 	color: #fff;
-	font-family: 'Open Sans Condensed', sans-serif;
+	font-family: 'NotoSans', sans-serif;
 	font-weight: 700;
 	text-decoration: none;
 	-moz-transition: background-color .25s ease-in-out, color .25s ease-in-out;
@@ -411,7 +430,7 @@ ol {
 
 .pagination .pages {
 	display: inline-block;
-	font-family: 'Open Sans Condensed', sans-serif;
+	font-family: 'NotoSans', sans-serif;
 	font-weight: 700;
 }
 
@@ -551,6 +570,7 @@ ol {
 	border-top: solid 1px rgba(0, 0, 0, 0.25);
 	box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.075);
 	padding: 0.5em 0 0.5em 0;
+	font-weight: bold;
 }
 
 	.box.recent-posts li:first-child {
@@ -751,7 +771,7 @@ ol {
 		color: #fff;
 		line-height: 44px;
 		font-size: 1.25em;
-		font-family: 'Open Sans Condensed', sans-serif;
+		font-family: 'NotoSans', sans-serif;
 		font-weight: 700;
 		letter-spacing: 0.1em;
 		text-shadow: -1px -1px 0px rgba(0, 0, 0, 0.5);
@@ -937,7 +957,7 @@ ol {
 			line-height: 1.75em;
 		}
 
-		h2 {
+		h1 {
 			font-size: 1.2em;
 		}
 
@@ -1038,7 +1058,7 @@ ol {
 	/* Logo */
 
 		#logo {
-			font-family: 'Open Sans Condensed', sans-serif;
+			font-family: 'NotoSans', sans-serif;
 			font-weight: 700;
 			font-size: 2em;
 			letter-spacing: 0.1em;
@@ -1058,7 +1078,7 @@ ol {
 			}
 
 		.logo2 {
-			font-family: 'Open Sans Condensed', sans-serif;
+			font-family: 'NotoSans', sans-serif;
 			font-weight: 700;
 			font-size: 2em;
 			letter-spacing: 0.1em;
@@ -1127,7 +1147,7 @@ ol {
 
 	/* Box */
 
-		.box.post h2 {
+		.box.post h1 {
 			font-size: 3.25em;
 			line-height: 1.25em;
 		}
@@ -1162,7 +1182,7 @@ ol {
 			.box.post .info .date {
 				position: relative;
 				z-index: 1;
-				font-family: 'Open Sans Condensed', sans-serif;
+				font-family: 'NotoSans', sans-serif;
 				font-weight: 400;
 				text-align: center;
 				display: block;
@@ -1238,7 +1258,7 @@ ol {
 
 	/* Box */
 
-		.box.post h2 {
+		.box.post h1 {
 			font-size: 3.25em;
 			line-height: 1.25em;
 		}
@@ -1358,7 +1378,7 @@ ol {
 			letter-spacing: 0;
 		}
 
-		h2, h3, h4, h5, h6 {
+		h1, h3, h4, h5, h6 {
 			font-size: 1.5em;
 		}
 
@@ -1397,7 +1417,7 @@ ol {
 
 			.box.post header > p {
 				font-size: 1em;
-				font-family: 'Source Sans Pro', sans-serif;
+				font-family: 'NotoSans', sans-serif;
 				line-height: 1.5em;
 			}
 
@@ -1503,6 +1523,9 @@ ol {
 		display: none;
 	}
 
+	.space {
+	margin: 0.8em;}
+
 }
 
 /* Off-Canvas Sidebar */
@@ -1576,6 +1599,10 @@ ol {
 
 		
 }
+
+#sidebar h2{
+font-size: 1.2em;}
+
 
 
 

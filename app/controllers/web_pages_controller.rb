@@ -2,9 +2,6 @@ class WebPagesController < ApplicationController
   def home
   end
 
-  def about
-  end
-
   #検索フォームを書いているページです
   def search_page
   end
@@ -41,4 +38,52 @@ class WebPagesController < ApplicationController
     render 'posts/index'
     
   end
+
+  
+  #ここから下はサイドバーにあるリンクに対応するコントローラーです
+  #記事の検索方法は改善が必要です
+
+  #このサイトについて
+  def about
+  end
+
+  #新着記事
+  def new_posts
+    #未完成
+  end
+
+  #連絡先はこちら
+  def contact
+  end
+
+  #タグで探す　java版
+  def java
+    @posts = Kaminari.paginate_array(Tag.search(["", "1"])).page(params[:page]).per(10)
+  end
+
+  #タグで探す　統合版
+  def bedrock
+    @posts = Kaminari.paginate_array(Tag.search(["", "2"])).page(params[:page]).per(10)
+  end
+
+  #タグで探す　java/統合版
+  def java_BE
+    @posts = Kaminari.paginate_array(Tag.search(["", "3"])).page(params[:page]).per(10)
+  end
+
+  #トラップで探す　天空トラップタワー
+  def ttt
+    @posts = Kaminari.paginate_array(Post.search("天空トラップタワー")).page(params[:page]).per(10)
+  end
+
+  #トラップで探す　クリーパートラップ
+  def creeper
+    @posts = Kaminari.paginate_array(Post.search("クリーパートラップ")).page(params[:page]).per(10)
+  end
+
+  #トラップで探す　ゴーレムトラップ
+  def golem
+    @posts = Kaminari.paginate_array(Post.search("ゴーレムトラップ")).page(params[:page]).per(10)
+  end
+
 end

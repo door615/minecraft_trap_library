@@ -1,0 +1,13 @@
+<%= form_with(url: add_tag_path, method: :post, local: true) do |form| %>
+
+    <p>
+      <%= form.label :タグの名前を入力 %><br>
+      <%= form.text_field :name %>
+    </p>
+
+
+    <p>
+      <%= form.submit "Create a Tag", class: "button" %>
+    </p>
+
+<% end %>

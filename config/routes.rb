@@ -14,4 +14,6 @@ Rails.application.routes.draw do
   get '/java_BE', to: 'web_pages#java_BE'
   get '/new_pages', to: 'web_pages#new_posts'
   get '/contact', to: 'web_pages#contact'
+  get '/add_tag', to: 'posts#add_tag'
+  post 'add_tag', to: 'posts#create_tag'
 end

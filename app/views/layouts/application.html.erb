@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>MinecraftTrapLibrary</title>
+    <title><%= full_title(yield(:title)) %></title>
+    <meta name="description" content="<%=  full_description(yield(:description)) %>">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />    <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 

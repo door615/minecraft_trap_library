@@ -1,0 +1,12 @@
+<!-- サイドバーからアクセスできるページでのタイトルとディスクリプション
+に使用する変数を提供するパーシャルです。基本的にはこのパーシャル
+が使用されるときは@post.tagはstringなのですが、一応エラーが出たら困るので
+if文を書きました。
+現状このパーシャルを用いるとエラーが発生します。なぜなら、@postsが配列で
+与えられていて、@post.tagsとは書けないからです。>
+
+<% if !@posts.tags.blank? && !@post.tags.instance_of?(Array) %>
+    <% @posts.tags.each do |t| %>
+        provide(:title, t.name, :description, t.name)
+    <% end %>
+<% end %>

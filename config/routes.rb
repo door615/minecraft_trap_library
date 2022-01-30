@@ -16,4 +16,6 @@ Rails.application.routes.draw do
   get '/contact', to: 'web_pages#contact'
   get '/add_tag', to: 'posts#add_tag'
   post 'add_tag', to: 'posts#create_tag'
+  get '/privacy', to: 'web_pages#privacy'
+  get '/riyoukiyaku', to: 'web_pages#riyoukiyaku'
 end

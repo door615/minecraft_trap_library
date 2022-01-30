@@ -22,7 +22,7 @@ class PostsController < ApplicationController
     #検索ページからここに来たときは@postがすでにあるので、
     #@postに値を入れることはしません
     if @post == nil
-    @posts = Post.page(params[:page]).per(10)
+      @posts = Post.page(params[:page]).per(10)
     end
   end
 

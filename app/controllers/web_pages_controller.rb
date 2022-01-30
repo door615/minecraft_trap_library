@@ -42,9 +42,22 @@ class WebPagesController < ApplicationController
   
   #ここから下はサイドバーにあるリンクに対応するコントローラーです
   #記事の検索方法は改善が必要です
-
+  require "google_drive"
   #このサイトについて
   def about
+    #credentials = Google::Auth::UserRefreshCredentials.new(
+    #  client_id: "578220293587-n2csh3abac66gpgp8e9fc1gjblg5vsgu.apps.googleusercontent.com",
+    # client_secret: "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",
+    #  scope: [
+    #  "https://www.googleapis.com/auth/drive",
+    #  "https://spreadsheets.google.com/feeds/",
+    #  ],
+    # redirect_uri: "http://localhost:3000")
+    #  puts "ここにアクセスしてください---" + credentials.authorization_uri.to_s
+    #  credentials.code = params[:code]
+    #  credentials.fetch_access_token!
+    #  puts "REFRESH TOEKNゲットする---" + credentials.refresh_token.to_s
+     # @session = GoogleDrive.login_with_oauth(credentials.access_token)
   end
 
   #プライバシーポリシーを書いています

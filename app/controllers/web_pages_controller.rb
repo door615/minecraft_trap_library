@@ -47,6 +47,14 @@ class WebPagesController < ApplicationController
   def about
   end
 
+  #プライバシーポリシーを書いています
+  def privacy
+  end
+
+  #利用規約を書いています
+  def riyoukiyaku
+  end
+
   #新着記事
   def new_posts
     #未完成

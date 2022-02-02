@@ -67,12 +67,12 @@ class WebPagesController < ApplicationController
 
   #タグで探す　統合版
   def bedrock
-    @posts = Kaminari.paginate_array(Post.tag_.search(["", "2"])).page(params[:page]).per(10)
+    @posts = Kaminari.paginate_array(Post.tag_search(["", "2"])).page(params[:page]).per(10)
   end
 
   #タグで探す　java/統合版
   def java_BE
-    @posts = Kaminari.paginate_array(Post.tag_.search(["", "3"])).page(params[:page]).per(10)
+    @posts = Kaminari.paginate_array(Post.tag_search(["", "3"])).page(params[:page]).per(10)
   end
 
   #トラップで探す　天空トラップタワー

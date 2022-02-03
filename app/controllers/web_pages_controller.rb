@@ -17,6 +17,7 @@ class WebPagesController < ApplicationController
 
     #検索フォームにキーワードとタグが両方とも入力されていたら、キーワードのあいまい検索
     #とタグ検索をAND検索します。
+    #Post.search(keyword)はキーワード検索、Post.tag_search(tag_ids)はタグのAND検索です
     if keyword != "" && tag_ids != [""]
       posts = Post.search(keyword).tag_search(tag_ids)
       @posts = Kaminari.paginate_array(posts).page(params[:page]).per(10)

@@ -67,7 +67,7 @@ class PostsController < ApplicationController
 
   end
 
-  # 記事の削除をします
+  # 記事の削除をします。未完成です
   def destroy
   end
 

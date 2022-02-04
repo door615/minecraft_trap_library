@@ -1,3 +1,6 @@
+<% provide(:title, "詳細検索") %>
+<% provide(:description, "記事の詳細検索はこちら") %>
+
 <%= form_with url: search_path, method: :get, local: true do |form| %>
     <%= form.text_field :keyword, value: @keyword %>
 

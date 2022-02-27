@@ -4,7 +4,7 @@ module ApplicationHelper
     def full_title(page_title = '')
         base_title = "Minecraftトラップライブラリー"
         if page_title.empty?
-          "#{base_title} | マイクラのトラップをまとめました"
+          "#{base_title} | マイクラのトラップを全てまとめました"
         else
           "#{page_title} | #{base_title}"
         end
@@ -24,14 +24,12 @@ module ApplicationHelper
       #provideされた文字列にトラップが含まれている場合、以下の文章になります
       elsif page_description.match(/.*?トラップ.*?/)
 
-          "#{page_description}の一覧ページです。あなたが作りたい
-          #{page_description}はどれですか？"
+          "#{page_description}の一覧ページです。あなたが作りたい#{page_description}はどれですか？"
 
       #タグで探す　java,統合版のディスクリプションです。
       elsif page_description.match(/.*?版.*?/)
           
-        "#{page_description}のトラップ一覧ページです。あなたが作りたい
-        #{page_description}のトラップはどれですか？"
+        "#{page_description}のトラップ一覧ページです。あなたが作りたい#{page_description}のトラップはどれですか？"
 
       #サイドバーのabout、contactなどの静的ページのディスクリプションです。
       else

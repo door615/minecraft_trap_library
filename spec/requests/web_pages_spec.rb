@@ -23,7 +23,7 @@ RSpec.describe "WebPages", type: :request do
       expect(response).to have_http_status(200)
     end
 
-    #このページは未完成なのでこのテストはコメントアウトしてます
+    # このページは未完成なのでこのテストはコメントアウトしてます
     # it "new_posts" do
     #   get new_posts_path
     #   expect(response).to have_http_status(200)

@@ -1,6 +1,4 @@
 class WebPagesController < ApplicationController
-  def home
-  end
 
   #検索フォームを書いているページです
   def search_page

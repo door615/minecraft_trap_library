@@ -26,7 +26,8 @@ class Post < ApplicationRecord
 
             #AND検索の記述です。正直に言うと自分ではどうしてもAND検索を実装する
             #ことが出来なかったのでコピペしました。発行されるSQLも完全に理解した
-            #とは言い難いので、SQLを頑張って勉強したらここに戻ってこようと思います
+            #とは言い難いので、SQLを頑張って勉強したらここに戻ってこようと思います→理解しました。
+            #この部分に関するブログを書く予定です。
             array2 = Post.joins(:post_tags).where(id: PostTag.select(:post_id)
             .where(tag_id: tag_ids)
             .group(:post_id)

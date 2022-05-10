@@ -62,4 +62,6 @@ gem 'carrierwave', '~> 2.0'
 gem 'kaminari'
 gem 'google_drive'
 gem 'sitemap_generator'
+gem 'fog-aws'
+gem 'dotenv-rails'
 

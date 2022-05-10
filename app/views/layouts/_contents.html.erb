@@ -11,7 +11,7 @@
         するようにはしていなく、herokuでは画像が消えてしまうので、とりあえず全てデフォルトの画像
         にしています-->
         <% if post.avatar? %>
-            <div class="card__image-holder"> <img class="card__image" src="/assets/default.png" alt="サムネイル画像"> </div>
+            <div class="card__image-holder"> <img class="card__image" src="<%= post.avatar.url %>" alt="サムネイル画像"> </div>
         <% else %>
             <div class="card__image-holder"> <img class="card__image" src="/assets/default.png" alt="サムネイル画像"> </div>
         <% end %>

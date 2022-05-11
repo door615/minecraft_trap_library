@@ -18,9 +18,9 @@
     <% end %>
 
     <% if !@post.blog_link.blank? %>
-        <div class="movie-wrap">
+        <div>
             <%= link_to "#{@post.blog_link}", "#{@post.blog_link}" %>
-        </div>
+        </div><br>
     <% end %>
 
     <p>

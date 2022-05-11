@@ -25,5 +25,9 @@ module MinecraftTrapLibrary
         helper_specs: false,
         routing_specs: false
     end
+
+    require './lib/CloudflareProxy'
+
+    config.middleware.use CloudflareProxy
   end
 end

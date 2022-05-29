@@ -23,7 +23,7 @@
                 <p class="card_timecategory"><time class="pubdate entry-time dfont" itemprop="datePublished" datetime="2021-10-16"><%= post.created_at %></time></p>
                 
                 <p class="card_htitle"><%= post.title %></p>
-                <% post.tags.each do |tag| %>
+                <% post.tags.order(:priority_number).each do |tag| %>
                 <span class="card_htitle font_size"><%= "#{tag.name}" + "　" %></span>
                 <% end %>
 

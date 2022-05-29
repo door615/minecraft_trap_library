@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
   #newとeditとadd_tagは現在は管理人限定なので、パスワード認証機能をつけています
-  before_action :logged_in_admin, only: [:new, :create, :edit, :update, :add_tag, :create_tag]
+  before_action :logged_in_admin, only: [:new, :create, :edit, :update, :add_tag, :create_tag, :edit_tag, :update_tag]
     
   #記事を作成するときのストロングパラメーター
   #title:記事のタイトル　feature_text:記事の本文　avatar:画像　youtube_link:埋め込みリンク
@@ -12,10 +12,18 @@ class PostsController < ApplicationController
   end
 
   #タグを追加するときのストロングパラメーター
-  private def tag_params
-    params.permit(:name)
+  private def add_tag_params
+    params.permit(:name, :priority_number)
 
   end
+
+  #タグを編集するときのストロングパラメーター
+  private def edit_tag_params
+    params.permit(tags: [:name, :priority_number])[:tags]
+
+  end
+
+  
 
   # 記事の一覧表示と検索結果の表示をします。
   def index
@@ -79,7 +87,7 @@ class PostsController < ApplicationController
   #タグの追加をします
   def create_tag
 
-    @tag = Tag.new(tag_params)
+    @tag = Tag.new(add_tag_params)
 
     if @tag.save
       flash.now[:success] = "タグを追加しました！"
@@ -89,6 +97,22 @@ class PostsController < ApplicationController
       render 'add_tag'
     end
 
+  end
+
+  #タグの編集をします
+  def edit_tag
+    @tags = Tag.all.order(:priority_number)
+  end
+
+  #タグの更新をします
+  def update_tag
+
+    @tags = edit_tag_params.keys.each do |id|
+      tag = Tag.find(id)
+      tag.update(edit_tag_params[id])
+      tag
+    end
+    redirect_to edit_tag_path
   end
 
 

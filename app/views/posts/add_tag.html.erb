@@ -5,6 +5,10 @@
       <%= form.text_field :name %>
     </p>
 
+    <p>
+      <%= form.label :"優先番号(バージョン:1 トラップの種類: 2 トラップの規模:3 経験値:99 アイテム:100)" %><br>
+      <%= form.number_field :priority_number %>
+    </p>
 
     <p>
       <%= form.submit "Create a Tag", class: "button" %>

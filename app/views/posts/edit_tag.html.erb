@@ -1,0 +1,23 @@
+<%= form_with(url: edit_tag_path, method: :patch, local: true) do |form| %>
+
+  <%= @tags.each do |tag| %>
+  
+    <%= fields_for "tags[]", tag do |fi| %>
+    <p>
+      <%= fi.label :タグの名前を入力 %><br>
+      <%= fi.text_field :name %>
+    </p>
+
+    <p>
+      <%= fi.label :"優先番号(バージョン:1 トラップの種類: 2 トラップの規模:3 経験値:99 アイテム:100)" %><br>
+      <%= fi.number_field :priority_number %>
+    </p>
+
+    <% end %>
+  <% end %>
+
+    <p>
+      <%= form.submit "Update a Tag", class: "button" %>
+    </p>
+
+<% end %>
